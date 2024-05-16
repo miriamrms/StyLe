@@ -36,13 +36,13 @@ struct ContentView: View {
                     .font(.custom("Poppins-Regular", size: 16))
                     .padding(.top, 32)
                     .padding(.bottom, 20)
-                Rectangle()
-                    .frame(height: 444)
-                    .padding(.bottom, 28)
-                    .foregroundColor(.secondarycolor)
+//                Rectangle()
+//                    .frame(height: 444)
+//                    .padding(.bottom, 28)
+//                    .foregroundColor(.secondarycolor)
                 
                 //Carrossel
-                
+                CarrosselView()
                 //Botão Calcular
                 Button(action: {print("Apertou o Botão")},
                        label: {
