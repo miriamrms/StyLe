@@ -12,6 +12,7 @@
 		0258B7092BF4E6CB00564320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0258B7082BF4E6CB00564320 /* Assets.xcassets */; };
 		0258B70C2BF4E6CB00564320 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0258B70B2BF4E6CB00564320 /* Preview Assets.xcassets */; };
 		0258B7152BF64ABA00564320 /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0258B7142BF64ABA00564320 /* Merriweather-Black.ttf */; };
+		0258B7202BF64F0800564320 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0258B71F2BF64F0800564320 /* Poppins-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		0258B70B2BF4E6CB00564320 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0258B7142BF64ABA00564320 /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.ttf"; sourceTree = "<group>"; };
 		0258B7162BF64ACE00564320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0258B71C2BF64E3600564320 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		0258B71F2BF64F0800564320 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				0258B7162BF64ACE00564320 /* Info.plist */,
-				0258B7142BF64ABA00564320 /* Merriweather-Black.ttf */,
 				0258B7042BF4E6C900564320 /* StyLeCodeApp.swift */,
 				0258B7062BF4E6C900564320 /* ContentView.swift */,
 				0258B7082BF4E6CB00564320 /* Assets.xcassets */,
+				0258B71B2BF64E2F00564320 /* fonts */,
 				0258B70A2BF4E6CB00564320 /* Preview Content */,
 			);
 			path = StyLeCode;
@@ -70,6 +73,16 @@
 				0258B70B2BF4E6CB00564320 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0258B71B2BF64E2F00564320 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0258B71F2BF64F0800564320 /* Poppins-Regular.ttf */,
+				0258B71C2BF64E3600564320 /* Poppins-Bold.ttf */,
+				0258B7142BF64ABA00564320 /* Merriweather-Black.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +146,7 @@
 				0258B70C2BF4E6CB00564320 /* Preview Assets.xcassets in Resources */,
 				0258B7092BF4E6CB00564320 /* Assets.xcassets in Resources */,
 				0258B7152BF64ABA00564320 /* Merriweather-Black.ttf in Resources */,
+				0258B7202BF64F0800564320 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
