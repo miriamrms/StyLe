@@ -11,6 +11,8 @@ struct ContentView: View {
     var body: some View {
         ZStack(alignment: .top){
             Color.primarycolor
+                .ignoresSafeArea()
+             
             VStack(spacing: 0){
                 //Safe Area
                 Rectangle()
@@ -24,6 +26,7 @@ struct ContentView: View {
                     Text("StyLe").foregroundColor(.primarycolor)
                         .font(.custom("Merriweather-Black", size: 32))
                 }
+                //Textos
                 Text("DESCUBRA SEU ESTILO DE APRENDIZADO")
                     .foregroundColor(.secondarycolor)
                     .font(.custom("Poppins-Bold", size: 16))
@@ -38,23 +41,31 @@ struct ContentView: View {
                     .padding(.bottom, 28)
                     .foregroundColor(.secondarycolor)
                 
-                Button(action: {print("Apertou o Botão")}, label: {
-                   
+                //Carrossel
+                
+                //Botão Calcular
+                Button(action: {print("Apertou o Botão")},
+                       label: {
+                    
                     ZStack {
                         RoundedRectangle(cornerRadius: 24)
                             .fill(.primarycolor)
-                                    .frame(width: 172, height: 46)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 25)
-                                            .stroke(Color.red, lineWidth: 6)
-                                    )
+                            .frame(width: 172, height: 46)
+                            .background(
+                                RoundedRectangle(cornerRadius: 25)
+                                    .stroke(Color.defButton, lineWidth: 6)
+                            )
                         Text("Calcular")
+                            .foregroundColor(.defButton)
+                            .font(.custom("Poppins-Bold", size: 20))
                         
                     }
                 })
             }
+            .ignoresSafeArea()
+//            .containerRelativeFrame(.vertical)
         }
-        .ignoresSafeArea()
+        
     }
 }
 
