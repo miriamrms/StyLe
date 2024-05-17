@@ -14,6 +14,9 @@
 		0258B7152BF64ABA00564320 /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0258B7142BF64ABA00564320 /* Merriweather-Black.ttf */; };
 		0258B7202BF64F0800564320 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0258B71F2BF64F0800564320 /* Poppins-Regular.ttf */; };
 		0258B75D2BF69AE500564320 /* CarrosselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258B75C2BF69AE500564320 /* CarrosselView.swift */; };
+		0258B7622BF7815500564320 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258B7612BF7815500564320 /* Images.swift */; };
+		0258B7642BF7881200564320 /* Vetores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258B7632BF7881200564320 /* Vetores.swift */; };
+		0258B7662BF7929500564320 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0258B7652BF7929500564320 /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		0258B71C2BF64E3600564320 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		0258B71F2BF64F0800564320 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		0258B75C2BF69AE500564320 /* CarrosselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrosselView.swift; sourceTree = "<group>"; };
+		0258B7612BF7815500564320 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		0258B7632BF7881200564320 /* Vetores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vetores.swift; sourceTree = "<group>"; };
+		0258B7652BF7929500564320 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,8 @@
 				0258B7162BF64ACE00564320 /* Info.plist */,
 				0258B7042BF4E6C900564320 /* StyLeCodeApp.swift */,
 				0258B7062BF4E6C900564320 /* ContentView.swift */,
+				0258B7612BF7815500564320 /* Images.swift */,
+				0258B7632BF7881200564320 /* Vetores.swift */,
 				0258B75C2BF69AE500564320 /* CarrosselView.swift */,
 				0258B7082BF4E6CB00564320 /* Assets.xcassets */,
 				0258B71B2BF64E2F00564320 /* fonts */,
@@ -82,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				0258B71F2BF64F0800564320 /* Poppins-Regular.ttf */,
+				0258B7652BF7929500564320 /* Poppins-SemiBold.ttf */,
 				0258B71C2BF64E3600564320 /* Poppins-Bold.ttf */,
 				0258B7142BF64ABA00564320 /* Merriweather-Black.ttf */,
 			);
@@ -146,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0258B7662BF7929500564320 /* Poppins-SemiBold.ttf in Resources */,
 				0258B70C2BF4E6CB00564320 /* Preview Assets.xcassets in Resources */,
 				0258B7092BF4E6CB00564320 /* Assets.xcassets in Resources */,
 				0258B7152BF64ABA00564320 /* Merriweather-Black.ttf in Resources */,
@@ -161,6 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0258B7072BF4E6C900564320 /* ContentView.swift in Sources */,
+				0258B7622BF7815500564320 /* Images.swift in Sources */,
+				0258B7642BF7881200564320 /* Vetores.swift in Sources */,
 				0258B75D2BF69AE500564320 /* CarrosselView.swift in Sources */,
 				0258B7052BF4E6C900564320 /* StyLeCodeApp.swift in Sources */,
 			);

@@ -9,6 +9,9 @@ import SwiftUI
 
 struct CarrosselView: View {
     @State private var currentIndex = 0
+    
+//    let iconVec: [Image] = iconVector
+    
     var body: some View {
         GeometryReader { proxy in
             let width = proxy.size.width
@@ -26,7 +29,7 @@ struct CarrosselView: View {
                                 VStack {
                                     
                                 }
-                                .frame(width: 280, height: 348)
+                                .frame(width: 280, height: 380)
                                 .background(Color.secondarycolor)
                                 .cornerRadius(20)
                                 
@@ -36,22 +39,31 @@ struct CarrosselView: View {
                                         .stroke(.primarycolor, lineWidth: 2)
                                         .foregroundColor(.secondarycolor)
                                         .frame(width: 64, height: 64)
-                                    Text("?")
+                                    iconVector[index]
                                         .foregroundColor(.primarycolor)
-                                        .font(.custom("Poppins-Bold", size: 30))
+                                        .font(.system(size: 30))
                                 }
                                 .padding(-32)
                                 
+                                ZStack{
+                                    Text(textosVector[index])
+                                        .foregroundColor(.primarycolor)
+                                        .font(.custom("Poppins-SemiBold", size: 20))
+                                        .multilineTextAlignment(.center)
+                                        .padding(.leading, 8)
+                                        .padding(.trailing, 8)
+                                }
+                                .padding(.top, 68)
+                                .frame(width: 240, height: 237)
 
                                 }
-                                .frame(width: 280, height: 380)
+                                .frame(width: 280, height: 444)
                                 .scaleEffect(scale)
                                 .opacity(opacity)
+
                                 
-                            
                         }
                         . frame(width: 280, height: 444)
-                        
                         
                     }
                 }
@@ -60,7 +72,7 @@ struct CarrosselView: View {
             }
             
         }
-        .frame(height: 380)
+        .frame(height: 444)
     }
 }
 
