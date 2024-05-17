@@ -55,17 +55,15 @@ struct ContentView: View {
                         Text("Calcular")
                             .foregroundColor(.defButton)
                             .font(.custom("Poppins-Bold", size: 20))
-                        
                     }
                 })
                 .padding(.top, 20)
             }
             .ignoresSafeArea()
-//            .containerRelativeFrame(.vertical)
         }
-        
     }
 }
+
 
 #Preview {
     ContentView()

@@ -26,7 +26,24 @@ struct CarrosselView: View {
                             let opacity = Double(scale)
                             
                             ZStack(alignment: .top){
-                                VStack {
+                                VStack{
+                                    ZStack{
+                                        Text(textosVector[index])
+                                            .foregroundColor(.primarycolor)
+                                            .font(.custom("Poppins-SemiBold", size: 20))
+                                            .multilineTextAlignment(.center)
+                                            .padding(.leading, 4)
+                                            .padding(.trailing, 4)
+                                    }
+                                    .frame(width: 240, height: 169)
+                                    Spacer()
+                                        .frame(maxHeight: 20)
+                                    HStack{
+                                        Color.red
+                                        
+                                        
+                                    }
+                                    .frame(width: 232, height: 52)
                                     
                                 }
                                 .frame(width: 280, height: 380)
@@ -45,16 +62,6 @@ struct CarrosselView: View {
                                 }
                                 .padding(-32)
                                 
-                                ZStack{
-                                    Text(textosVector[index])
-                                        .foregroundColor(.primarycolor)
-                                        .font(.custom("Poppins-SemiBold", size: 20))
-                                        .multilineTextAlignment(.center)
-                                        .padding(.leading, 8)
-                                        .padding(.trailing, 8)
-                                }
-                                .padding(.top, 68)
-                                .frame(width: 240, height: 237)
 
                                 }
                                 .frame(width: 280, height: 444)
