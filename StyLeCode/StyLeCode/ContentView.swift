@@ -16,6 +16,14 @@ struct ContentView: View {
     @State private var ptVisual = 0
     @State private var ptMaior = 0
     
+    @State private var pressedButton = false
+    
+    @State private var buttonStrokeColor: Color = .defButton
+    @State private var buttonFillColor: Color = .primarycolor
+    @State private var buttonTextColor: Color = .defButton
+    
+    
+    
     var body: some View {
         ZStack(alignment: .top){
             Color.primarycolor
@@ -47,25 +55,29 @@ struct ContentView: View {
                 
                 //Carrossel
                 CarrosselView(buttonValues: $buttonStatus)
+// .background(isFalse ? (isPressed ? Color.red : Color.green) : (isPressed ? Color.blue: Color.gray))
 
                 //Botão Calcular
-                Button(action: {calcular(array: buttonStatus)},
+                Button(action: {calcular(array: buttonStatus); pressedButton.toggle();updateColor()},
                        label: {
                     
                     ZStack {
                         RoundedRectangle(cornerRadius: 24)
-                            .fill(.primarycolor)
+                            .fill(buttonFillColor)
                             .frame(width: 172, height: 46)
                             .background(
                                 RoundedRectangle(cornerRadius: 25)
-                                    .stroke(Color.defButton, lineWidth: 6)
+                                    .stroke(Color(buttonStrokeColor), lineWidth: 6)
                             )
                         Text("Calcular")
-                            .foregroundColor(.defButton)
+                            .foregroundColor(buttonTextColor)
                             .font(.custom("Poppins-Bold", size: 20))
                     }
                 })
                 .padding(.top, 20)
+                .onChange(of: !buttonStatus.contains(-1)){ newValue in
+                    updateColor()
+                }
                 .alert("Você ainda não selecionou todas opções. Finalize para calcular!", isPresented: $showingAlert) {
                     Button("OK", role: .cancel){}
                 }
@@ -74,18 +86,26 @@ struct ContentView: View {
         }
     }
     
-    func searchElement(array: [Int], element: Int) -> Bool {
-       for ele in array {
-          if ele == element {
-             return true
-          }
-       }
-       return false
+    func updateColor(){
+        if !buttonStatus.contains(-1){
+            buttonStrokeColor = .secondarycolor
+            buttonFillColor = .primarycolor
+            buttonTextColor = .secondarycolor
+            if pressedButton{
+                buttonFillColor = .secondarycolor
+                buttonTextColor = .primarycolor
+            }
+        }
+        else{
+            buttonStrokeColor = .defButton
+            buttonFillColor = .primarycolor
+            buttonTextColor = .defButton
+        }
+        
     }
     
-    
     func calcular(array: [Int]){
-        if searchElement(array: buttonStatus, element: -1){
+        if array.contains(-1){
             showingAlert = true
         }
         else
