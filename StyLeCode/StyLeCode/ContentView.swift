@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var buttonStatus: [Int] = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+    @State private var showingAlert = false
+    @State private var ptAuditivo = 0
+    @State private var ptCinestesico = 0
+    @State private var ptLeituraEscrita = 0
+    @State private var ptVisual = 0
+    @State private var ptMaior = 0
+    
     var body: some View {
         ZStack(alignment: .top){
             Color.primarycolor
@@ -38,10 +46,10 @@ struct ContentView: View {
                     .padding(.bottom, 20)
                 
                 //Carrossel
-                CarrosselView()
+                CarrosselView(buttonValues: $buttonStatus)
 
                 //Botão Calcular
-                Button(action: {print("Apertou o Botão")},
+                Button(action: {calcular(array: buttonStatus)},
                        label: {
                     
                     ZStack {
@@ -58,8 +66,42 @@ struct ContentView: View {
                     }
                 })
                 .padding(.top, 20)
+                .alert("Você ainda não selecionou todas opções. Finalize para calcular!", isPresented: $showingAlert) {
+                    Button("OK", role: .cancel){}
+                }
             }
             .ignoresSafeArea()
+        }
+    }
+    
+    func searchElement(array: [Int], element: Int) -> Bool {
+       for ele in array {
+          if ele == element {
+             return true
+          }
+       }
+       return false
+    }
+    
+    
+    func calcular(array: [Int]){
+        if searchElement(array: buttonStatus, element: -1){
+            showingAlert = true
+        }
+        else
+        {
+            showingAlert = false
+            print("Calculo")
+            ptAuditivo = buttonStatus[0] + buttonStatus[0] + buttonStatus[0] + buttonStatus[3]
+            ptCinestesico = buttonStatus[3] + buttonStatus[4] + buttonStatus[5] + buttonStatus[6]
+            ptLeituraEscrita = buttonStatus[7] + buttonStatus[8] + buttonStatus[9] + buttonStatus[10]
+            ptVisual = buttonStatus[10] + buttonStatus[11] + buttonStatus[12] + buttonStatus[13]
+            
+            if ptAuditivo > ptCinestesico && ptAuditivo > ptLeituraEscrita && ptAuditivo > ptVisual{
+                
+            }
+            
+            
         }
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CarrosselView: View {
     @State private var currentIndex = 0
+    @Binding var buttonValues: [Int]
+    //  [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
     
 //    let iconVec: [Image] = iconVector
     
@@ -38,7 +40,7 @@ struct CarrosselView: View {
                                     .frame(width: 240, height: 169)
                                     Spacer()
                                         .frame(maxHeight: 20)
-                                    buttonView()
+                                    buttonView(selection: $buttonValues[index])
                                         .frame(width: 232, height: 52)
                                         .padding(.leading,24)
                                         .padding(.trailing,24)
@@ -82,5 +84,5 @@ struct CarrosselView: View {
 }
 
 #Preview {
-    CarrosselView()
+    CarrosselView(buttonValues: .constant([-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]))
 }
