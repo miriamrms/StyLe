@@ -15,6 +15,9 @@ struct ContentView: View {
     @State private var ptLeituraEscrita = 0
     @State private var ptVisual = 0
     @State private var ptMaior = 0
+    @State private var percent: Double = 0.0
+    @State private var estilo = ""
+    
     
     @State private var pressedButton = false
     
@@ -117,9 +120,30 @@ struct ContentView: View {
             ptLeituraEscrita = buttonStatus[7] + buttonStatus[8] + buttonStatus[9] + buttonStatus[10]
             ptVisual = buttonStatus[10] + buttonStatus[11] + buttonStatus[12] + buttonStatus[13]
             
-            if ptAuditivo > ptCinestesico && ptAuditivo > ptLeituraEscrita && ptAuditivo > ptVisual{
-                
+            if ptAuditivo >= ptCinestesico && ptAuditivo >= ptLeituraEscrita && ptAuditivo >= ptVisual{
+                ptMaior = ptAuditivo
+                estilo = "Auditivo"
             }
+            else if ptVisual >= ptAuditivo && ptVisual >= ptCinestesico && ptVisual >= ptLeituraEscrita{
+                ptMaior = ptVisual
+                estilo = "Visual"
+            }
+            else if ptCinestesico >= ptAuditivo && ptCinestesico >= ptVisual && ptCinestesico >= ptLeituraEscrita{
+                ptMaior = ptCinestesico
+                estilo = "Cinestésico"
+            }
+            else{
+                ptMaior = ptLeituraEscrita
+                estilo = "Leitura e Escrita"
+            }
+            
+            percent = Double( ptMaior)*100/Double((ptVisual+ptAuditivo+ptCinestesico+ptLeituraEscrita))
+            
+            print("Seu estilo predominante é: \(estilo) com \(percent)%")
+            print(ptVisual)
+            print(ptAuditivo)
+            print(ptLeituraEscrita)
+            print(ptCinestesico)
             
             
         }
