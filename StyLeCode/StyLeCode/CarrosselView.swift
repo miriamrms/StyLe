@@ -38,12 +38,10 @@ struct CarrosselView: View {
                                     .frame(width: 240, height: 169)
                                     Spacer()
                                         .frame(maxHeight: 20)
-                                    HStack{
-                                        Color.red
-                                        
-                                        
-                                    }
-                                    .frame(width: 232, height: 52)
+                                    buttonView()
+                                        .frame(width: 232, height: 52)
+                                        .padding(.leading,24)
+                                        .padding(.trailing,24)
                                     
                                 }
                                 .frame(width: 280, height: 380)
