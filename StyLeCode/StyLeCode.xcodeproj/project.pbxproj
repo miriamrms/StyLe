@@ -19,6 +19,7 @@
 		0258B7662BF7929500564320 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0258B7652BF7929500564320 /* Poppins-SemiBold.ttf */; };
 		02C9BB262BFB6A7C00C1285A /* buttonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9BB252BFB6A7C00C1285A /* buttonView.swift */; };
 		02C9BB282BFB6A9F00C1285A /* popupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9BB272BFB6A9F00C1285A /* popupView.swift */; };
+		02C9BB3F2BFCB6E700C1285A /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9BB3E2BFCB6E700C1285A /* PopUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		0258B7652BF7929500564320 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		02C9BB252BFB6A7C00C1285A /* buttonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonView.swift; sourceTree = "<group>"; };
 		02C9BB272BFB6A9F00C1285A /* popupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popupView.swift; sourceTree = "<group>"; };
+		02C9BB3E2BFCB6E700C1285A /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				0258B7162BF64ACE00564320 /* Info.plist */,
 				0258B7042BF4E6C900564320 /* StyLeCodeApp.swift */,
+				02C9BB3E2BFCB6E700C1285A /* PopUpView.swift */,
 				02C9BB252BFB6A7C00C1285A /* buttonView.swift */,
 				0258B7062BF4E6C900564320 /* ContentView.swift */,
 				0258B7612BF7815500564320 /* Images.swift */,
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C9BB262BFB6A7C00C1285A /* buttonView.swift in Sources */,
+				02C9BB3F2BFCB6E700C1285A /* PopUpView.swift in Sources */,
 				02C9BB282BFB6A9F00C1285A /* popupView.swift in Sources */,
 				0258B7072BF4E6C900564320 /* ContentView.swift in Sources */,
 				0258B7622BF7815500564320 /* Images.swift in Sources */,

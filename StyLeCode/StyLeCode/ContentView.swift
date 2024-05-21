@@ -7,6 +7,22 @@
 
 import SwiftUI
 
+struct Estilos{
+    var name: String
+    var color: Color
+    var image: Image
+    var description: String
+    var percent: Double
+    
+    init(name: String = "", color: Color = .blue, image: Image = Image(systemName: "info.circle"), description: String = "", percent: Double = 0.0) {
+        self.name = name
+        self.color = color
+        self.image = image
+        self.description = description
+        self.percent = percent
+    }
+}
+
 struct ContentView: View {
     @State var buttonStatus: [Int] = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
     @State private var showingAlert = false
@@ -16,14 +32,20 @@ struct ContentView: View {
     @State private var ptVisual = 0
     @State private var ptMaior = 0
     @State private var percent: Double = 0.0
-    @State private var estilo = ""
-    
+//    @State var estilo = ""
+//    @State var estiloDescricao = ""
+//    @State var imagemMaior: Image = Image.icon.auditivoIcon
+//    @State var estiloColor: Color = .primarycolor
     
     @State private var pressedButton = false
     
     @State private var buttonStrokeColor: Color = .defButton
     @State private var buttonFillColor: Color = .primarycolor
     @State private var buttonTextColor: Color = .defButton
+    
+    @State private var showPopUp = false
+    
+    @State private var estilos = Estilos()
     
     
     
@@ -86,6 +108,10 @@ struct ContentView: View {
                 }
             }
             .ignoresSafeArea()
+            if showPopUp{
+                PopUpView(isShowing: $showPopUp, estilinho: $estilos)
+            }
+            
         }
     }
     
@@ -108,11 +134,14 @@ struct ContentView: View {
     }
     
     func calcular(array: [Int]){
+        print(buttonStatus)
         if array.contains(-1){
+            showPopUp = false
             showingAlert = true
         }
         else
         {
+            
             showingAlert = false
             print("Calculo")
             ptAuditivo = buttonStatus[0] + buttonStatus[0] + buttonStatus[0] + buttonStatus[3]
@@ -122,32 +151,55 @@ struct ContentView: View {
             
             if ptAuditivo >= ptCinestesico && ptAuditivo >= ptLeituraEscrita && ptAuditivo >= ptVisual{
                 ptMaior = ptAuditivo
-                estilo = "Auditivo"
+                estilos.name = "Auditivo"
+                estilos.color = .auditivocolor
+                estilos.description = "Você aprende melhor ouvindo. Prefere palestras, discussões e gravações de áudio para captar a informação."
+                estilos.image = Image.icon.auditivoIcon
+            
             }
+            
+            
             else if ptVisual >= ptAuditivo && ptVisual >= ptCinestesico && ptVisual >= ptLeituraEscrita{
                 ptMaior = ptVisual
-                estilo = "Visual"
+                estilos.name = "Visual"
+                estilos.color = .visualcolor
+                estilos.description = "Você aprende melhor através de imagens, gráficos e diagramas. Prefere visualizar a informação para compreendê-la."
+                estilos.image = Image.icon.visualIcon
+                
             }
+            
             else if ptCinestesico >= ptAuditivo && ptCinestesico >= ptVisual && ptCinestesico >= ptLeituraEscrita{
                 ptMaior = ptCinestesico
-                estilo = "Cinestésico"
+                estilos.name = "Cinestésico"
+                estilos.color = .cinestesicocolor
+                estilos.description = "Você aprende melhor fazendo e experimentando. Prefere atividades práticas e movimentação para entender a informação."
+                estilos.image = Image.icon.cinestesicoIcon
+            
             }
             else{
                 ptMaior = ptLeituraEscrita
-                estilo = "Leitura e Escrita"
+                estilos.name = "Leitura/Escrita"
+                estilos.color = .rlcolor
+                estilos.description = "Você aprende melhor lendo e escrevendo. Prefere materiais escritos, como livros, anotações e listas, para absorver a informação."
+                estilos.image = Image.icon.leituraescritaIcon
+                
             }
+            estilos.percent = Double( ptMaior)*100/Double((ptVisual+ptAuditivo+ptCinestesico+ptLeituraEscrita))
             
-            percent = Double( ptMaior)*100/Double((ptVisual+ptAuditivo+ptCinestesico+ptLeituraEscrita))
             
-            print("Seu estilo predominante é: \(estilo) com \(percent)%")
+            print("Seu estilo predominante é: \(estilos.name) com \(estilos.percent)%")
             print(ptVisual)
             print(ptAuditivo)
             print(ptLeituraEscrita)
             print(ptCinestesico)
             
+            showPopUp = true
             
         }
+        
+        
     }
+
 }
 
 

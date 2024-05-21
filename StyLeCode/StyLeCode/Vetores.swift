@@ -22,11 +22,11 @@ let textosVector: [String] = ["Ouvir palestras, aulas ou tutoriais sobre o assun
                               "Aplicar os conceitos para resolução de problemas práticos e reais.",
                               "Fazer anotações detalhadas enquanto estuda.",
                               "Escrever resumos e sínteses após estudar.",
-                              "Ler e revisou o assunto usando livros, artigos, pesquisas, etc.",
+                              "Ler e revisar o assunto usando livros, artigos, pesquisas, etc.",
                               "Criar flashcards e fichas de estudos com perguntas.",
                               "Assistir a vídeos explicativos ou animações.",
                               "Utilizar gráficos, diagramas, mapas mentais ou outros materiais visuais.",
-                              "Desenhar ou faz esboços para representar os conceitos."
+                              "Desenhar ou fazer esboços para representar os conceitos."
 ]
 
 var buttonStatus: [[Int]] = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
