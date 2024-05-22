@@ -144,7 +144,7 @@ struct ContentView: View {
             
             showingAlert = false
             print("Calculo")
-            ptAuditivo = buttonStatus[0] + buttonStatus[0] + buttonStatus[0] + buttonStatus[3]
+            ptAuditivo = buttonStatus[0] + buttonStatus[1] + buttonStatus[2] + buttonStatus[3]
             ptCinestesico = buttonStatus[3] + buttonStatus[4] + buttonStatus[5] + buttonStatus[6]
             ptLeituraEscrita = buttonStatus[7] + buttonStatus[8] + buttonStatus[9] + buttonStatus[10]
             ptVisual = buttonStatus[10] + buttonStatus[11] + buttonStatus[12] + buttonStatus[13]
