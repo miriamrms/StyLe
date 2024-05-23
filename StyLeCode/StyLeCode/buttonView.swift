@@ -12,6 +12,7 @@ struct buttonView: View {
     
     @Binding var selection: Int
     
+    
     private let buttonIcon: [Image] = [Image.icon.notIcon,Image.icon.yesIcon]
     private let buttonSelectedIcon: [Image] = [Image.icon.notPressedIcon,Image.icon.yesPressedIcon]
     var body: some View {

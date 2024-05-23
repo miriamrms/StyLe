@@ -12,6 +12,7 @@ struct PopUpView: View {
     @Binding var isShowing: Bool
     @Binding var estilinho: Estilos
     
+    
 //    @Binding var estilo: String
 //    @Binding var estiloDescricao: String
 //    @Binding var imagemMaior: Image
