@@ -71,6 +71,7 @@ struct ContentView: View {
                 Text("DESCUBRA SEU ESTILO DE APRENDIZADO")
                     .foregroundColor(.secondarycolor)
                     .font(.custom("Poppins-Bold", size: 16))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .padding(.top, 48)
                 Text("Ao estudar, você costuma:")
                     .foregroundColor(.secondarycolor)

@@ -75,8 +75,10 @@ struct CarrosselView: View {
                     }
                 }
                 .padding(.horizontal, (width - (width * 0.7)) / 2)
+                .scrollTargetLayout()
                 
             }
+            .scrollTargetBehavior(.viewAligned)
             
         }
         .frame(height: 444)
