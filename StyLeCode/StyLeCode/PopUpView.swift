@@ -42,7 +42,7 @@ struct PopUpView: View {
                     .padding(.top, 16)
 
                     
-                Text("\(String(format: "%.2f", estilinho.percent))")
+                Text("\(String(format: "%.0f", estilinho.percent))%")
                     .font(.custom("Poppins-Bold", size: 72))
                     .foregroundColor(estilinho.color)
             
