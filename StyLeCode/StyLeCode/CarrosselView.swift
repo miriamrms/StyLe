@@ -33,7 +33,10 @@ struct CarrosselView: View {
                                 let opacity = Double(scale)
                                 
 //                                Button("Jump to #"){
-//                                    value.scrollTo(index+1, anchor: .leading)
+//                                    withAnimation {
+//                                        value.scrollTo(index+1, anchor: .leading)
+//                                    }
+//                                   
 //                                }
 //                                .padding()
                                 
@@ -50,7 +53,11 @@ struct CarrosselView: View {
                                         .frame(width: 240, height: 169)
                                         Spacer()
                                             .frame(maxHeight: 20)
-                                        buttonView(selection: $buttonValues[index])
+                                        buttonView(action: {
+                                            withAnimation {
+                                                value.scrollTo(index+1, anchor: .leading)
+                                            }
+                                        }, selection: $buttonValues[index])
                                             .frame(width: 232, height: 52)
                                             .padding(.leading,24)
                                             .padding(.trailing,24)

@@ -141,7 +141,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0258B6FC2BF4E6C900564320 /* Build configuration list for PBXProject "StyLeCode" */;
+			buildConfigurationList = 0258B6FC2BF4E6C900564320 /* Build configuration list for PBXProject "StyLe" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -324,6 +324,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StyLeCode/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StyLe;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -354,6 +355,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StyLeCode/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StyLe;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -375,7 +377,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0258B6FC2BF4E6C900564320 /* Build configuration list for PBXProject "StyLeCode" */ = {
+		0258B6FC2BF4E6C900564320 /* Build configuration list for PBXProject "StyLe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0258B70D2BF4E6CB00564320 /* Debug */,

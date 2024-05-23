@@ -10,6 +10,8 @@ import SwiftUI
 struct buttonView: View {
     @State private var selectedIndex: Int = 2 // Rastreia o índice do botão selecionado
     
+    var action: () -> Void
+    
     @Binding var selection: Int
     
     
@@ -28,10 +30,13 @@ struct buttonView: View {
                             selectedIndex = 2
                             selection = -1
                         }
-                        
-                }
+                    }
+                    if selectedIndex == index{
+                        action()
+                    }
+                    
                 }){
-        
+                    
                     if selectedIndex == index{
                         buttonSelectedIcon[index]
                             .foregroundColor(.primarycolor)
@@ -42,11 +47,11 @@ struct buttonView: View {
                         buttonIcon[index]
                             .foregroundColor(.primarycolor)
                             .font(.system(size: 52))
-                            
+                        
                     }
-                
-        
-                
+                    
+                    
+                    
                 }
             }
         }
@@ -54,6 +59,6 @@ struct buttonView: View {
 }
 
 #Preview {
-   
-    buttonView(selection: .constant(0))
+    
+    buttonView(action: {}, selection: .constant(0))
 }
